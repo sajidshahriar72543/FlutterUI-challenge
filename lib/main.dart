@@ -127,9 +127,37 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontSize: 14),
                         ),
                       ),
-                    )
+                    ),
                   ]),
             ),
+            const SizedBox(
+              height: 25,
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 25, right: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const <Widget>[
+                  Text(
+                    "My Choices",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    "View Past records",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            
           ],
         ));
   }
