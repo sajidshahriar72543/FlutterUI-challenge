@@ -29,30 +29,108 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const FlutterLogo(
-          size: 20.0,
-        ),
-        elevation: 0.0,
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.grey,
+        appBar: AppBar(
+          title: const FlutterLogo(
+            size: 20.0,
           ),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
+          elevation: 0.0,
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          leading: IconButton(
             icon: const Icon(
-              Icons.menu,
+              Icons.arrow_back,
               color: Colors.grey,
             ),
             onPressed: () {},
           ),
-        ],
-      ),
-    );
+          actions: [
+            IconButton(
+              icon: const Icon(
+                Icons.menu,
+                color: Colors.grey,
+              ),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body: ListView(
+          shrinkWrap: true,
+          children: <Widget>[
+            Container(
+              alignment: const Alignment(0.0, -0.40),
+              height: 100,
+              color: Colors.white,
+              child: const Text(
+                "Get Coaching",
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(25, 90, 25, 0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    blurRadius: 2,
+                  ),
+                ],
+              ),
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Stack(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(25, 25, 5, 5),
+                          child: const Text(
+                            "YOU HAVE",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(25, 40, 5, 20),
+                          child: const Text(
+                            "206",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 40,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 100,
+                    ),
+                    Container(
+                      height: 50,
+                      width: 125,
+                      decoration: BoxDecoration(
+                        color: Colors.greenAccent.withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Buy more",
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
+                      ),
+                    )
+                  ]),
+            ),
+          ],
+        ));
   }
 }
